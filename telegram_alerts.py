@@ -11,8 +11,8 @@ def sma(series,timeperiod):
         sum=sum + float(series[i])
     return sum /timeperiod
 
-api_key = "IMQaYnycqb2zEnVWoLxP7M0l5drTf4Y2UPcJybkHtIVBY71jWuqGiinZGxxkLWpj"
-api_secret = "S7cT4lJsC2QoJFcbjapwvrusEcbqNmL6LSn1tJzwJPUvnyVZvpiWrIJkJnLokuz5"
+api_key = "your api key"
+api_secret = "your api secret"
 
 tickers_spot = ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'NEOUSDT', 'LTCUSDT', 'QTUMUSDT', 'ADAUSDT', 'XRPUSDT','EOSUSDT', 'TUSDUSDT',
          'IOTAUSDT', 'XLMUSDT', 'ONTUSDT', 'TRXUSDT', 'ETCUSDT', 'ICXUSDT','NULSUSDT', 'VETUSDT', 'LINKUSDT', 'WAVESUSDT',
@@ -53,8 +53,8 @@ try:
 except :print("Please check your internet connection!")
 
 def send_msg(text):
-    token = "5505141036:AAEWX0Pt_o3DROBdEsYesQ3kAHf3zUUnEvw"
-    chat_id = "796755791"
+    token = "your token"
+    chat_id = "your chat id"
     url_req = "https://api.telegram.org/bot" + token + "/sendMessage" + "?chat_id=" + chat_id + "&text=" + text
     results = requests.get(url_req)
     print(results.json())
